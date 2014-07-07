@@ -4,7 +4,7 @@
  */
 (function(){
 	var version=((window.pproxy_version||"")+"").split(".");
-	var version_last_str="0.3.1";
+	var version_last_str="0.3.0";
 	var version_last=version_last_str.split(".");
 	var has_new_version=false;
 	for(var i in version_last){
