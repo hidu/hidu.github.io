@@ -14,7 +14,7 @@
 		}
 	}
 	var html="";
-	html="The last version is:" + "<font color=red>"+version_last_str+"</font>";
+	html="The last version is : " + "<font color=red>"+version_last_str+"</font>";
 //	if(has_new_version){
 //		html+=""
 //	}
