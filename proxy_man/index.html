@@ -4,9 +4,9 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -31,14 +31,44 @@
  <section id="main_content">
  
  <h3>
+<a name="Introduction" class="anchor" href="Introduction">
+<span class="octicon octicon-link"></span></a>Introduction
+</h3>
+<p>http proxy manager,the easiest way to use and manager proxies!</p>
+<p>manager http、socks4、socks4a、socks5 proxy and auto check proxy alive </p>
+<p>it's wrote by golang</p>
+<pre style="width:500px">
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
++ client (want visit http://www.baidu.com/)              +  
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
+                        |  
+                        |  via proxy 127.0.0.1:8090  
+                        |  
+                        V  
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
++                       +         proxy pool             +  
++ proxy manager listen  ++++++++++++++++++++++++++++++++++  
++ on (127.0.0.1:8090)   +  http_proxy1,http_proxy2,      +  
++                       +  socks5_proxy1,socks5_proxy2   +  
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
+                        |  
+                        |choose one proxy visit www.baidu.com  
+                        |  
+                        V  
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
++        site:www.baidu.com                             +  
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
+</pre>
+
+ <h3>
 <a name="index" class="anchor" href="index">
-<span class="octicon octicon-link"></span></a>screenshot index page
+<span class="octicon octicon-link"></span></a>screenshot :index page
 </h3>
 <p><img alt="index page" src="screenshot/index.png"></p>
 
  <h3>
 <a name="add" class="anchor" href="add">
-<span class="octicon octicon-link"></span></a>screenshot add proxy page
+<span class="octicon octicon-link"></span></a>screenshot :add proxy page
 </h3>
 <p><img alt="index page" src="screenshot/add.png"></p>
 
