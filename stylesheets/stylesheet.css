@@ -93,6 +93,10 @@ header h2 {
   width: 620px;
   margin: 0 auto;
 }
+.inner_new {
+  width: 85%;
+  margin: 0 auto;
+}
 
 #container .inner img {
   max-width: 100%;
