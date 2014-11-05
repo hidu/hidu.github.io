@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>pproxy HTTP protocol analysis tool</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner_new">
+        <header>
+          <h1>pproxy</h1>
+          <h2>0.4.5</h2>
+        </header>
+        
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/hidu/pproxy" id="view-on-github" class="button"><span>View on GitHub</span></a>
+          <a href="http://pan.baidu.com/s/1i3pAe7V" id="downloads-binary-file" class="button"><span>Download Binary</span></a>
+        </section>
+        <hr>
+
+ <section id="main_content">
+ 
+ <h3>
+<a name="Introduction" class="anchor" href="Introduction">
+<span class="octicon octicon-link"></span></a>Introduction
+</h3>
+<p>HTTP protocol analysis tool.</p>
+<p>Based on BS architecture,written by golang.</p>
+
+<h3>Useage</h3>
+<h4>1.Client（eg:phone）</h4>
+<p>set wifi http proxy:<br/>
+proxy host ： <b>xxx.xxx.xxx.xxx</b><br/>
+proxy port ： <b>8123</b>
+</p>
+<small>android users can use <b>proxyDroid</b> to manager proxys</small>
+
+<h4>2.Server:user interface</h4>
+<ol>
+<li>visit Session List Page to view all the http request through this proxy.</li>
+<li>in the session filter form, all text input can use<font color=red>|</font> to enter multiple conditions.</li>
+<li>eg user:<input type="text" value="a|b" style="width:40px">,it mean user is a or b.</li>
+<li>you can use <b>replay</b> to replay a request.</li>
+</ol>
+
+<h4>3.Modify Requests</h4>
+<div>you can modify http request.GET、POST paramas and http headers.</div>
+<p><b>req object has these attributes</b>(url=http://www.example.com/album/list?cid=126)：</p>
+<pre>
+schema : http
+host : www.example.com
+port : 80
+path : /album/list
+get: {cid:[123]}
+post: {}
+username : 
+password : 
+method: GET
+form_get  : {add:function(k,v){},set:function(k,v){},get:function(k){},len:function(){}} 
+form_post : {add:function(k,v){},set:function(k,v){},get:function(k){},len:function(){}}
+
+host_addr: #the real host you wish，eg 127.0.0.1:3218
+</pre>
+
+<div>use javascript to achieve it.</div>
+<pre><code>function rewrite(req){
+    //you code start<span style="color:blue">
+    if(req.host=="www.baidu.com"){
+       req.host="www.163.com"
+       req.host_addr="127.0.0.0:81" // send req to 127.0.0.1:81
+       form_get.add("a","a")
+       //form_post.set("d","a")
+    }</span>
+    // you code end
+    return req
+}</code></pre>
+
+<p>more code demo:</p>
+<pre><code>if(req.host=="www.baidu.com"){
+   req.host="www.163.com"
+   req.host_addr="127.0.0.0:81" // send req to 127.0.0.1:81
+   form_get.add("a","a")
+   //form_post.set("d","a")
+}
+//demo 2 
+if(req.host=="www.hao123.com"){
+   req.url="http://zhida.baidu.com/"
+}
+//demo 3 
+if(req.host=="www.hao123.com"){
+  use_file("index.htm")   //use the static file in dir "file"
+}</code></pre>
+
+
+
+<h4>4.Modify Hosts</h4>
+<div>host conf:</div>
+<pre>#all port
+news.baidu.com 127.0.0.1
+
+#only 81 port match
+news.baidu.com:81 127.0.0.1:82
+
+news.163.com 127.0.0.1:8080
+</pre>
+
+ <h3>
+<a name="index" class="anchor" href="index">
+<span class="octicon octicon-link"></span></a>screenshot :index page
+</h3>
+<p><img alt="index page" src="screenshot/index.png" style="width:100%"></p>
+<p><img alt="index page" src="screenshot/index1.png" style="width:100%"></p>
+
+
+</section>
+
+    <footer> </footer>
+        
+      </div>
+    </div>
+  </body>
+</html>
