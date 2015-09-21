@@ -13,8 +13,10 @@
 			break
 		}
 	}
-	var html="";
-	html="<font color=red>there is a new version: <b>"+version_last_str+"</b></font>";
-	var div=document.getElementById("new_version_slot");
-	div.innerHTML=html
+	if(has_new_version){
+		var html="";
+		html="<font color=red>there is a new version: <b>"+version_last_str+"</b></font>";
+		var div=document.getElementById("new_version_slot");
+		div.innerHTML=html
+	}
 })();
