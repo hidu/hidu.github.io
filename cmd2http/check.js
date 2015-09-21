@@ -14,7 +14,7 @@
 		}
 	}
 	var html="";
-	html="<font color=red>there is a new version: <b>"+version_last_str+"</b></font><br/><br/>";
+	html="<font color=red>there is a new version: <b>"+version_last_str+"</b></font>";
 	var div=document.getElementById("new_version_slot");
 	div.innerHTML=html
 })();
