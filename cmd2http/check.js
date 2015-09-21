@@ -1,9 +1,9 @@
 /**
- * https://github.com/hidu/pproxy
+ * https://github.com/hidu/cmd2http
  */
 (function(){
 	var version=((window.pproxy_version||"")+"").split(".");
-	var version_last_str="0.4.7";
+	var version_last_str="0.2.1";
 	var version_last=version_last_str.split(".");
 	var has_new_version=false;
 	for(var i in version_last){
