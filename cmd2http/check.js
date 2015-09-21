@@ -2,7 +2,7 @@
  * https://github.com/hidu/cmd2http
  */
 (function(){
-	var version=((window.cmd2http_version||"")+"").split(".");
+	var version=((window.cmd2http_version||"")+" ").split(" ")[0];
 	var version_last_str="0.2.1";
 	var version_last=version_last_str.split(".");
 	var has_new_version=false;
