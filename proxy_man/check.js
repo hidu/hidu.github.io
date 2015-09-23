@@ -21,3 +21,13 @@
 	var div=document.getElementById("new_version_slot");
 	div.innerHTML=html
 })();
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?6503c4e37a1f978305e7bc2da2ef3746";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+_hmt.push(['_setCustomVar', 1, 'appname', 'proxy-manager', 1]);
+_hmt.push(['_setCustomVar', 2, 'appversion', window.pproxy_version+"", 1]);
