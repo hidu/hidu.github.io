@@ -29,4 +29,4 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 _hmt.push(['_setCustomVar', 1, 'appname', 'cmd2http', 1]);
-_hmt.push(['_setCustomVar', 1, 'appversion', window.cmd2http_version, 1]);
+_hmt.push(['_setCustomVar', 2, 'appversion', (window.cmd2http_version+"").split(" ")[0], 1]);
