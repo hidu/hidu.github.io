@@ -12,10 +12,12 @@
 			break
 		}
 	}
-	var html="";
-	html="last version: " + "<font color=red>"+version_last_str+"</font>";
-	var div=document.getElementById("new_version_slot");
-	div.innerHTML=html
+	if(has_new_version){
+		var html="";
+		html="there is a new version: " + "<font color=red>"+version_last_str+"</font>";
+		var div=document.getElementById("new_version_slot");
+		div.innerHTML=html
+	}
 })();
 
 var _hmt = _hmt || [];
