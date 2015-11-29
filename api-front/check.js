@@ -1,9 +1,9 @@
 /**
- * https://github.com/hidu/api-man
+ * https://github.com/hidu/api-front
  */
 (function(){
-	var version=((window.api_man_version||"")+"").split(".");
-	var version_last_str="0.6.1";
+	var version=((window.api_front_version||"")+"").split(".");
+	var version_last_str="0.6.4";
 	var version_last=version_last_str.split(".");
 	var has_new_version=false;
 	for(var i in version_last){
@@ -27,5 +27,5 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-_hmt.push(['_setCustomVar', 1, 'appname', 'api-man', 1]);
+_hmt.push(['_setCustomVar', 1, 'appname', 'api-front', 1]);
 _hmt.push(['_setCustomVar', 2, 'appversion', window.api_man_version+"", 1]);
