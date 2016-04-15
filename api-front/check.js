@@ -3,7 +3,7 @@
  */
 (function(){
 	var version=((window.api_front_version||"")+"").split(".");
-	var version_last_str="0.6.4";
+	var version_last_str="0.7.1";
 	var version_last=version_last_str.split(".");
 	var has_new_version=false;
 	for(var i in version_last){
